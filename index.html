@@ -84,68 +84,6 @@
 
     .text-center { text-align: center; }
 
-    /* Main Avatar Circle */
-    .avatar-wrapper {
-      position: relative;
-      width: 190px;
-      height: 190px;
-      margin: 0 auto 25px;
-    }
-
-    .avatar-circle {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      padding: 6px;
-      background: linear-gradient(135deg, var(--fox-orange), #ff4e50, var(--soft-pink));
-      box-shadow: 0 10px 30px var(--shadow-pink);
-      animation: pulseGlow 3s infinite ease-in-out;
-    }
-
-    .avatar-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #ffffff;
-      display: block;
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% { transform: scale(1); box-shadow: 0 10px 25px rgba(230, 57, 70, 0.25); }
-      50% { transform: scale(1.03); box-shadow: 0 15px 35px rgba(255, 126, 95, 0.45); }
-    }
-
-    .fox-ear-sticker {
-      position: absolute;
-      top: -12px;
-      right: 10px;
-      font-size: 2.2rem;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
-      animation: bounce 2s infinite ease-in-out;
-    }
-
-    .heart-badge-sticker {
-      position: absolute;
-      bottom: 5px;
-      right: 5px;
-      background: #ffffff;
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      border: 2px solid var(--soft-pink);
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-8px) rotate(8deg); }
-    }
-
     /* Hero Typography */
     .hero-title {
       font-family: 'Dancing Script', cursive;
@@ -334,15 +272,6 @@
         <span>💖</span> Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 💕
       </div>
 
-      <!-- AVATAR PHẦN HÌNH TRÒN CỦA BẠN GÁI -->
-      <div class="avatar-wrapper">
-        <div class="avatar-circle">
-          <img src="1792399370872_196984683006122149_192609646487130034_ba51b25179e9bc2455c1248541ef4398.jpg" alt="Trần Thuý Hà Dễ Thương" class="avatar-img" id="gfAvatar">
-        </div>
-        <div class="fox-ear-sticker">🌸</div>
-        <div class="heart-badge-sticker">🥰</div>
-      </div>
-
       <h1 class="hero-title">Gửi Hà Dễ Thương Nhất Của Anh 💕</h1>
       <p class="hero-subtitle">Hôm nay là ngày 20/10, ngày dành riêng để nuông chiều và yêu thương em nhiều hơn nữa!</p>
 
@@ -526,7 +455,7 @@
     }
 
     // Gentle Synth Audio via Web Audio API
-    let audioCtx = null;
+    let audioCtx = null; giai = false;
     let isPlaying = false;
     let timerId = null;
 
